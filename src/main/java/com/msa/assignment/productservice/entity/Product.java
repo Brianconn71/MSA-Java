@@ -10,9 +10,8 @@ import javax.validation.constraints.Size;
 public class Product implements Serializable {
 
     @Id
-    @GeneratedValue(strategy=GenerationType.IDENTITY)
-    @Column(name="id")
-    private String Id;
+    @GeneratedValue
+    private Long Id;
     @Size(min=5)
     @Column(name="name")
     private String name;
@@ -26,7 +25,7 @@ public class Product implements Serializable {
 
     }
 
-    public String getId(){
+    public Long getId(){
         return Id;
     }
 
